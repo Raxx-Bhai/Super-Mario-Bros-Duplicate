@@ -390,7 +390,7 @@ MonoBehaviour:
   force: 3.3333333
   coefficient_of_friction: 0.2
   maxspeed: 10
-  jumpforce: 350
+  jumpforce: 7.5
 --- !u!1 &1835369930
 GameObject:
   m_ObjectHideFlags: 0

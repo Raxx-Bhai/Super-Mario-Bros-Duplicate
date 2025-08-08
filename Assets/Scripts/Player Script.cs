@@ -60,11 +60,11 @@ public class PlayerScript : MonoBehaviour
             direction_of_movement = velocity / speed;
         }
 
-        if (Input.GetKey(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             if (!isjumping)
             {
-                rb.AddForce(new Vector2(0, jumpforce));
+                rb.AddForce(new Vector2(0, jumpforce), ForceMode2D.Impulse);
             }
         }
         
@@ -75,10 +75,6 @@ public class PlayerScript : MonoBehaviour
         if (speed > 0)
         {
             rb.AddForce(new Vector2(-direction_of_movement * coefficient_of_friction * rb.mass, 0));
-        }
-        else
-        {
-            
         }
     }
 
